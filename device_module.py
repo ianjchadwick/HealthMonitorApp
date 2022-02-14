@@ -6,27 +6,30 @@ logging.basicConfig(filename="logs/device_module.log", format='%(asctime)s - %(l
 
 
 def device_reading(device_json):
-    """Module takes JSON as input from device, parses the data and uploads it to the correct database location"""
+    """Module takes JSON as input from device, parses the data and uploads it to the correct database location."""
     json_obj = open(device_json)
     data = json.load(json_obj)
+    # Dictionary to compare expected types based on input type
     types = {"temperature": float, "blood_pressure": [int, int], "oximeter": [int, int], "glucometer": int,
              "weight_height": [float, float]}
 
     type = data['device']['device_type']
     measurement = data['device']['measurement']
-    # noinspection PyTypeHints
+
+    # Validating data
     if type in types:
         type_check = types[type]
         if isinstance(measurement, list):
             for item in measurement:
-                # noinspection PyTypeHints
+
                 if not isinstance(item, type_check):
                     logging.error("Data measurement does not match datatype")
                     return
-    elif not isinstance(measurement, types[type]):
+    elif not isinstance(measurement, type_check):
         logging.error("Data measurement does not match datatype")
         return
 
+    # If data is valid, get the rest of the information from the JSON
     device_id = data['device']['device_id']
     patient_assigned = data['device']['patient_assigned']
     MAC = data['device']['MAC']
