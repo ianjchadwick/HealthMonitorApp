@@ -15,6 +15,10 @@ to send patients home with the devices to recover at home instead of in hospital
 Branches will be assigned an issue which will define the new features or functions that are being added to the 
 platform. Branches will be merged with the main branch once they have been adequately tested.
 
+## Database Design
+
+The database schema can be found at [this link](https://dbdiagram.io/d/620561ee85022f4ee573a861)
+
 ## Modules
 
 ### Device Module
