@@ -2,8 +2,8 @@ import json
 import logging
 
 
-def device_reading(device_json):
-    """Module takes JSON as input from device, parses the data and uploads it to the correct database location."""
+def validate_device_json(device_json):
+    """Module takes JSON as input from device, parses the data and ensures that the data is in a valid format."""
     # log configuration setup
     logging.basicConfig(filename="logs/device_module.log",
                         format='%(asctime)s - %(levelname)s - %(process)d - %(message)s',
@@ -39,7 +39,7 @@ def device_reading(device_json):
     model_number = data['model_number']
     model_name = data['model_name']
     serial_number = data['serial_number']
-    logging.info("Successfully, inputting info for device: " + str(device_id))
+    logging.info("Successfully validated data for device: " + str(device_id))
 
     return {"device_id": device_id,
             "patient_assigned": patient_assigned,
@@ -54,4 +54,4 @@ def device_reading(device_json):
 
 if __name__ == "__main__":
     test = "test_files/device_test.json"
-    print(device_reading(test))
+    print(validate_device_json(test))

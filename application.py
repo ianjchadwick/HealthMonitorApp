@@ -2,13 +2,20 @@
 from flask import Flask
 from flask_restful import Api, Resource, reqparse, abort
 
-app = Flask(__name__)
-api = Api(app)
+application = Flask(__name__)
+api = Api(application)
 
 device_put_args = reqparse.RequestParser()
-device_put_args.add_argument("name", type=str, help="Name of the video is required", required=True)
-device_put_args.add_argument("views", type=int, help="Views of the video is required", required=True)
-device_put_args.add_argument("likes", type=int, help="Likes on the video is required", required=True)
+device_put_args.add_argument("device_id", type=int, help="Must have a device_id", required=True)
+device_put_args.add_argument("patient_assigned", type=int, help="Must have a patient_id assigned", required=True)
+device_put_args.add_argument("type", type=str, help="Must have a device_type", required=True)
+device_put_args.add_argument("measurement", type=float, help="Must have a measurement", required=True)
+device_put_args.add_argument("MAC", type=str, help="Must have a MAC address", required=True)
+device_put_args.add_argument("purchase_date", type=str, help="Must have a device_type", required=True)
+device_put_args.add_argument("model_number", type=int, help="Must have a model_number", required=True)
+device_put_args.add_argument("model_name", type=str, help="Must have a model_name", required=True)
+device_put_args.add_argument("serial_number", type=int, help="Must have a serial_number", required=True)
+
 
 devices = {}
 
@@ -17,6 +24,7 @@ def device_id_dne(device_id):
     """Abort if the device_id does not exist (DNE)"""
     if device_id not in devices:
         abort(404, message="device_id does not exist")
+
 
 def device_id_already_exits(device_id):
     """Abort if the device_id already exists"""
@@ -47,8 +55,8 @@ class Device(Resource):
         return '', 204
 
 
-api.add_resource(Device, "/device/<int:device_id>")
+api.add_resource(Device, "/device/<string:device_id>")
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    application.run(debug=True)

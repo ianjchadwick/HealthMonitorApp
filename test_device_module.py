@@ -2,7 +2,7 @@ import device_module
 
 def test_device_module():
     test = "test_files/device_test.json"
-    data = device_module.device_reading(test)
+    data = device_module.validate_device_json(test)
     assert data == {'device_id': 1,
                     'patient_assigned': 12,
                     'type': 'temperature',
