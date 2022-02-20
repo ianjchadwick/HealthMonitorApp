@@ -1,5 +1,4 @@
-{"device": {
-  "device_id": 1,
+{ "device_id": 1,
   "patient_assigned": 12,
   "device_type": "temperature",
   "measurement": 98.6,
@@ -8,5 +7,4 @@
   "model_number": 1234,
   "model_name": "temp-o-matic",
   "serial_number": 56789
-  }
 }
