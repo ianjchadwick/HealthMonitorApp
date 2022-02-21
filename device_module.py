@@ -3,7 +3,8 @@ import logging
 
 
 def validate_device_json(device_json):
-    """Module takes JSON as input from device, parses the data and ensures that the data is in a valid format."""
+    """Module takes JSON as input from device, parses the data and ensures that the data is in a valid format. Then
+    returns a python dictionary with the validatated values."""
     # log configuration setup
     logging.basicConfig(filename="logs/device_module.log",
                         format='%(asctime)s - %(levelname)s - %(process)d - %(message)s',

@@ -1,6 +1,7 @@
 import device_module
 
-def test_device_module():
+def test_validate_device_json():
+    """A test for validate_device_json"""
     test = "test_files/device_test.json"
     data = device_module.validate_device_json(test)
     assert data == {'device_id': 1,
