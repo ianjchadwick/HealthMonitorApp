@@ -2,8 +2,19 @@
 from flask import Flask
 from flask_restful import Api, Resource, reqparse, abort
 
+header_text = '''
+    <html>\n<head> <title>Device Module Flask Test</title> </head>\n<body>'''
+instructions = '''
+    <p>This is a RESTful web service!\n'''
+home_link = '<p><a href="/">Back</a></p>\n'
+footer_text = '</body>\n</html>'
+
+
 application = Flask(__name__)
 api = Api(application)
+
+# add a rule for the index page.
+application.add_url_rule('/', 'index', (lambda: header_text + instructions + footer_text))
 
 device_put_args = reqparse.RequestParser()
 device_put_args.add_argument("device_id", type=int, help="Must have a device_id", required=True)
