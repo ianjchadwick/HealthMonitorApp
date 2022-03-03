@@ -27,6 +27,18 @@ The RESTful API is deployed to AWS Elastic Beanstalk. How to use and specific ca
 ### Device Module
 The device module is an API designed to allow different devices to upload the data to the platform. It will receive a JSON file with the device information, verify the data parse it and return a format that is ready to be uploaded into the database.
 
+#### Device Module Expected JSON format
+{ "device_id": 1,
+  "patient_assigned": 12,
+  "device_type": "temperature",
+  "measurement": 98.6,
+  "MAC": "30-65-EC-6F-C4-58",
+  "purchase_date": "01-01-2001",
+  "model_number": 1234,
+  "model_name": "temp-o-matic",
+  "serial_number": 56789
+}
+
 #### Calling the Device Module API
 The calls to the API are made using the requests library with the general format: "BaseURL" + "device/<device_id>" + data (in the format of a python dictionary using:
 - PUT: i.e. response = requests.put(BASE + "device/0", data) 
@@ -43,4 +55,19 @@ The chat message module will allow users to chat with other users of the app whi
 - Retrieve chat/message history
 
 #### Database Design
-The message module will be built around a document based database because the format of the document based database is a lot less restrictive than the relational SQL database and allows for more dynamic input of data as requirements change and enhancements are added.
+The database schema for the chat can be found at [this link](https://dbdiagram.io/d/6220252454f9ad109a4d6528)
+
+#### Chat Module Expected JSON Format
+{ "message_id": 1,
+  "conversation_id": 1,
+  "sender_id": 1234,
+  "recipient_id": 5678,
+  "message_date": "2001-01-24 12:30:55",
+  "message_txt": "This is a message!"
+}
+
+#### Calling the Chat Module API
+The calls to the API are made using the requests library with the general format: "BaseURL" + "chat/<msg_id>" + data (in the format of a python dictionary using:
+- PUT: i.e. response = requests.put(BASE + "chat/0", data) 
+- GET: i.e. response = requests.get(BASE + "chat/0")
+- DELETE i.e. response = requests.put(BASE + "chat/0", data)
