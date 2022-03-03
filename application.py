@@ -19,7 +19,7 @@ application.add_url_rule('/', 'index', (lambda: header_text + instructions + foo
 device_put_args = reqparse.RequestParser()
 device_put_args.add_argument("device_id", type=int, help="Must have a device_id", required=True)
 device_put_args.add_argument("patient_assigned", type=int, help="Must have a patient_id assigned", required=True)
-device_put_args.add_argument("type", type=str, help="Must have a device_type", required=True)
+device_put_args.add_argument("device_type", type=str, help="Must have a device_type", required=True)
 device_put_args.add_argument("measurement", help="Must have a measurement", required=True)
 device_put_args.add_argument("MAC", type=str, help="Must have a MAC address", required=True)
 device_put_args.add_argument("purchase_date", type=str, help="Must have a device_type", required=True)

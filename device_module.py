@@ -33,25 +33,9 @@ def validate_device_json(device_json):
         logging.error("Data measurement does not match datatype")
         return
 
-    # If data is valid, get the rest of the metadata/information from the JSON
-    device_id = data['device_id']
-    patient_assigned = data['patient_assigned']
-    MAC = data['MAC']
-    purchase_date = data['purchase_date']
-    model_number = data['model_number']
-    model_name = data['model_name']
-    serial_number = data['serial_number']
-    logging.info("Successfully validated data for device: " + str(device_id))
+    # If data is valid, return the JSON as a dictionary
 
-    return {"device_id": device_id,
-            "patient_assigned": patient_assigned,
-            "type": type,
-            "measurement": measurement,
-            "MAC": MAC,
-            "purchase_date": purchase_date,
-            "model_number": model_number,
-            "model_name": model_name,
-            "serial_number": serial_number}
+    return data
 
 
 if __name__ == "__main__":
