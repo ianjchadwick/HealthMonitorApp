@@ -72,7 +72,7 @@ class Message(Resource):
         msg_id_dne(msg_id)
         return chat[msg_id]
 
-    def put(self,msg_id):
+    def put(self, msg_id):
         """"Create a new message entry with input msg_id and insert the information into database"""
         # Abort if the device id already exists
         msg_id_already_exists(msg_id)
