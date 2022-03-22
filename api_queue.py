@@ -3,12 +3,6 @@ import queue
 import time
 from time import sleep
 
-# Initialize Queue
-q = queue.Queue()
-
-# Set the total number of concurrent threads allowed
-TOTAL_THREADS = 5
-
 
 def worker():
     while True:
@@ -27,16 +21,23 @@ def worker():
         q.task_done()
 
 
-# Turn-on the worker threads.
-for thread in range(TOTAL_THREADS):
-    threading.Thread(target=worker, daemon=True).start()
+if __name__ == "__main__":
+    # Initialize Queue
+    q = queue.Queue()
 
+    # Set the total number of concurrent threads allowed
+    TOTAL_THREADS = 5
 
-# Send thirty task requests to the worker.
-for item in range(30):
-    q.put((sleep, 5))
+    # Turn-on the worker threads.
+    for thread in range(TOTAL_THREADS):
+        threading.Thread(target=worker, daemon=True).start()
 
-# Block until all tasks are done.
-q.join()
+    # Send thirty task requests to the worker.
+    for item in range(30):
+        # Put a bunch of sleep tasks with different sleep time parameters
+        q.put((sleep, item/5+1))
 
-print('All work completed')
+    # Block until all tasks are done.
+    q.join()
+
+    print('All work completed')
