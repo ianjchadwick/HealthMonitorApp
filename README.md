@@ -21,6 +21,14 @@ The database schema can be found at [this link](https://dbdiagram.io/d/620561ee8
 
 ## Modules
 
+### Queueing System
+Added a basic queueing system file in api_queue.py that uses the queue and threading libraries to run multiple threads for each
+of the items on the queue. The current implementation requires the queue to have tuples with two elements; a function 
+as the first element and the parameter as the second element. The worker function will the print: the name of the 
+thread, the function that was passed to the worker and the start time. Then it will run the function with the parameter
+and finally print out: the name of the thread, the function that was passed to the worker, and the end time. Once all
+the items in the queue are completed it will exit.
+
 ### RESTful API
 The RESTful API is deployed to AWS Elastic Beanstalk. How to use and specific calls to the API are detailed under each sub-module's section.
 
