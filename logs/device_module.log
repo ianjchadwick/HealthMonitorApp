@@ -44,3 +44,36 @@
 2022-03-02 23:32:46,200 - INFO - 15996 - Successfully validated chat data from coversation_id: 1
 2022-03-02 23:33:51,896 - INFO - 48084 - Successfully validated data for device: 1
 2022-03-02 23:33:52,238 - INFO - 48084 - Successfully validated chat data from coversation_id: 1
+2022-03-20 15:08:34,299 - INFO - 5088 - Successfully validated data for device: 1
+2022-03-20 15:08:34,370 - INFO - 5088 - Successfully validated chat data from coversation_id: 1
+2022-03-22 08:30:53,966 - INFO - 12944 - Successfully validated data for device: 1
+2022-03-22 08:30:54,018 - INFO - 12944 - Successfully validated chat data from coversation_id: 1
+2022-03-22 09:41:18,211 - INFO - 3064 - Successfully validated data for device: 1
+2022-04-04 23:10:16,450 - INFO - 468 - Successfully validated data for device: 1
+2022-04-04 23:14:03,877 - INFO - 492 - Successfully validated data for device: 1
+2022-04-04 23:14:23,853 - INFO - 513 - Successfully validated data for device: 1
+2022-04-04 23:14:23,885 - ERROR - 513 - message_id is not present in input
+2022-04-04 23:16:04,100 - INFO - 559 - Successfully validated data for device: 1
+2022-04-04 23:16:20,845 - INFO - 590 - Successfully validated data for device: 1
+2022-04-04 23:18:15,499 - INFO - 645 - Successfully validated data for device: 1
+2022-04-04 23:20:22,088 - INFO - 658 - Successfully validated data for device: 1
+2022-04-04 23:48:43,403 - INFO - 968 - Successfully validated data for device: 1
+2022-04-04 23:49:33,576 - INFO - 989 - Successfully validated data for device: 1
+2022-04-04 23:49:33,619 - ERROR - 989 - message_id is not present in input
+2022-04-04 23:51:59,773 - INFO - 1014 - Successfully validated data for device: 1
+2022-04-04 23:52:48,065 - INFO - 1035 - Successfully validated data for device: 1
+2022-04-04 23:53:14,669 - INFO - 1047 - Successfully validated data for device: 1
+2022-04-04 23:53:14,715 - ERROR - 1047 - message_id is not present in input
+2022-04-04 23:56:23,633 - INFO - 1113 - Successfully validated data for device: 1
+2022-04-04 23:56:23,688 - ERROR - 1113 - message_id is not present in input
+2022-04-04 23:58:42,572 - INFO - 1178 - Successfully validated data for device: 1
+2022-04-05 13:21:03,702 - INFO - 22936 - Successfully validated data for device: 1
+2022-04-05 13:21:03,724 - ERROR - 22936 - message_id is not present in input
+2022-04-05 13:21:53,953 - INFO - 23492 - Successfully validated data for device: 1
+2022-04-05 13:21:53,974 - ERROR - 23492 - message_id is not present in input
+2022-04-05 13:22:27,700 - INFO - 22820 - Successfully validated data for device: 1
+2022-04-05 13:22:27,720 - INFO - 22820 - Successfully validated chat data from coversation_id: 1
+2022-04-05 13:46:21,357 - INFO - 11936 - Successfully validated data for device: 1
+2022-04-05 13:46:21,379 - INFO - 11936 - Successfully validated chat data from coversation_id: 1
+2022-04-05 13:46:54,351 - INFO - 10480 - Successfully validated data for device: 1
+2022-04-05 13:46:54,371 - INFO - 10480 - Successfully validated chat data from coversation_id: 1

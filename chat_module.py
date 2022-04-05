@@ -14,8 +14,8 @@ def validate_chat_json(chat_json):
     data = json.load(json_obj)
 
     # Dictionary to compare expected types based on input type
-    fields = ("message_id", "conversation_id", "sender_id", "recipient_id", "message_date", "message_txt")
-    types = {"message_id": int, "conversation_id": int, "sender_id": int, "recipient_id": int,
+    fields = ("_id", "conversation_id", "sender_id", "recipient_id", "message_date", "message_txt")
+    types = {"_id": int, "conversation_id": int, "sender_id": int, "recipient_id": int,
              "message_date": str, "message_txt": str}
 
     for field in fields:

@@ -17,7 +17,7 @@ application.add_url_rule('/', 'index', (lambda: header_text + instructions + foo
 
 # Rules for put arguments for Device Module
 device_put_args = reqparse.RequestParser()
-device_put_args.add_argument("device_id", type=int, help="Must have a device_id", required=True)
+device_put_args.add_argument("_id", type=int, help="Must have a device_id", required=True)
 device_put_args.add_argument("patient_assigned", type=int, help="Must have a patient_id assigned", required=True)
 device_put_args.add_argument("device_type", type=str, help="Must have a device_type", required=True)
 device_put_args.add_argument("measurement", help="Must have a measurement", required=True)
@@ -29,7 +29,7 @@ device_put_args.add_argument("serial_number", type=int, help="Must have a serial
 
 # Rules for put arguments for Chat Module
 msg_put_args = reqparse.RequestParser()
-msg_put_args.add_argument("message_id", type=int, help="Must have a message_id", required=True)
+msg_put_args.add_argument("_id", type=int, help="Must have a message_id", required=True)
 msg_put_args.add_argument("conversation_id", type=int, help="Must have a conversation_id", required=True)
 msg_put_args.add_argument("sender_id", type=int, help="Must have a sender_id", required=True)
 msg_put_args.add_argument("recipient_id", type=int, help="Must have a recipient_id", required=True)

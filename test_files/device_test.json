@@ -1,4 +1,4 @@
-{ "device_id": 1,
+{ "_id": 1,
   "patient_assigned": 12,
   "device_type": "temperature",
   "measurement": 98.6,
