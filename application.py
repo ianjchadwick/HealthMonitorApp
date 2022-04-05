@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Api, Resource, reqparse, abort
+import database
 
 header_text = '''
     <html>\n<head> <title>Device Module Flask Test</title> </head>\n<body>'''
