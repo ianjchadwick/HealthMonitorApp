@@ -49,3 +49,11 @@
 2022-03-22 08:30:53,966 - INFO - 12944 - Successfully validated data for device: 1
 2022-03-22 08:30:54,018 - INFO - 12944 - Successfully validated chat data from coversation_id: 1
 2022-03-22 09:41:18,211 - INFO - 3064 - Successfully validated data for device: 1
+2022-04-04 23:10:16,450 - INFO - 468 - Successfully validated data for device: 1
+2022-04-04 23:14:03,877 - INFO - 492 - Successfully validated data for device: 1
+2022-04-04 23:14:23,853 - INFO - 513 - Successfully validated data for device: 1
+2022-04-04 23:14:23,885 - ERROR - 513 - message_id is not present in input
+2022-04-04 23:16:04,100 - INFO - 559 - Successfully validated data for device: 1
+2022-04-04 23:16:20,845 - INFO - 590 - Successfully validated data for device: 1
+2022-04-04 23:18:15,499 - INFO - 645 - Successfully validated data for device: 1
+2022-04-04 23:20:22,088 - INFO - 658 - Successfully validated data for device: 1

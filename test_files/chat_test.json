@@ -1,4 +1,4 @@
-{ "message_id": 1,
+{ "_id": 1,
   "conversation_id": 1,
   "sender_id": 1234,
   "recipient_id": 5678,

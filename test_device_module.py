@@ -4,7 +4,7 @@ def test_validate_device_json():
     """A test for validate_device_json"""
     test = "test_files/device_test.json"
     data = device_module.validate_device_json(test)
-    assert data == {'device_id': 1,
+    assert data == {'_id': 1,
                     'patient_assigned': 12,
                     'device_type': 'temperature',
                     'measurement': 98.6,

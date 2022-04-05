@@ -34,7 +34,7 @@ def validate_device_json(device_json):
         return
 
     # If data is valid, return the JSON as a dictionary
-    logging.info("Successfully validated data for device: " + str(data["device_id"]))
+    logging.info("Successfully validated data for device: " + str(data["_id"]))
 
     return data
 
